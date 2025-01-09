@@ -9,7 +9,7 @@ def load_environment_variables():
     """
     load_dotenv()
 
-def load_embeddings(embeddings_file="data/embeddings.pt"):
+def load_embeddings(embeddings_file="data/web_scraped_data_embeddings.pt"):
     """
     Loads embeddings and their associated text chunks from a .pt file.
     Returns the SentenceTransformer model, embeddings tensor, and associated texts.

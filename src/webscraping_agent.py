@@ -12,9 +12,9 @@ load_dotenv()
 # Configuration
 EXCLUDED_PAGES = ["terms", "privacy", "cookie-policy", "blog", "newsletter", "testimonials"]
 MODEL_NAME = 'all-MiniLM-L6-v2'
-RAW_DATA_FILE = "data/raw_data.txt"
-CHUNKS_FILE = "data/chunks.txt"
-EMBEDDINGS_FILE = "data/embeddings.pt"
+RAW_DATA_FILE = "data/web_scraped_data.txt"
+CHUNKS_FILE = "data/web_scraped_data_chunks.txt"
+EMBEDDINGS_FILE = "data/web_scraped_data_embeddings.pt"
 
 # Initialize model
 model = SentenceTransformer(MODEL_NAME)
@@ -107,6 +107,7 @@ def chunk_text(raw_text, chunk_size=500, overlap=100):
 
     print(f"Text chunks saved to {CHUNKS_FILE}")
     return chunks
+
 
 def generate_embeddings(chunks):
     """

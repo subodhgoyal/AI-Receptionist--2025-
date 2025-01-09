@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer, util
 from openai import OpenAI
 
 # File paths
-EMBEDDINGS_FILE = "data/structured_embeddings.pt"
+EMBEDDINGS_FILE = "data/faq_responses_embeddings.pt"
 CHAT_HISTORY_DIR = "data/chat_sessions"
 
 # Initialize OpenAI client and embedding model

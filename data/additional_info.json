@@ -1,6 +1,7 @@
 [
-        {
-        "header": "Do you have any other affiliate businesses",
-        "content": "Yes, we do ...we have a few affiliate business in the technology space that offer AI generated marketing content for small and medium businesses."
+    {
+        "question": "Do you sell any over the counter medicines?",
+        "answer": "No, we don't sell any type of medicines. Our doctors prescribe the patients the medications based on their evaluation, and patients can collect those from the assigned pharmacy.",
+        "metadata": []
     }
 ]

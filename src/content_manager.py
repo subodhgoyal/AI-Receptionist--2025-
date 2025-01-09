@@ -5,24 +5,17 @@ from sentence_transformers import SentenceTransformer, util
 from openai import OpenAI
 
 # File paths
-EMBEDDINGS_FILE = "data/embeddings.pt"
-CHUNKS_FILE = "data/structured_chunks.json"
-
-# Fields to extract and organize into structured chunks
-FIELDS = [
-    "Business Name",
-    "Phone Number",
-    "Email",
-    "Address/Location",
-    "Business Hours",
-    "Products & Services Overview",
-    "Team Overview",
-    "How to Schedule an Appointment"
-]
+EMBEDDINGS_FILE = "data/web_scraped_data_embeddings.pt"
+FAQ_AUTOGEN_RESPONSES_FILE = "data/faq_autogen_responses.json"
+FAQ_MANUAL_RESPONSES_FILE = "data/faq_manual_responses.json"
+DOMAIN_FAQ_FILE = "data/domain_faqs.json"
+BUSINESS_CONFIG_FILE = "data/business_config.json"
+FAQ_RESPONSES_EMBEDDINGS_FILE = "data/faq_responses_embeddings.pt"
 
 # Initialize OpenAI client and embedding model
 client = OpenAI()
 model = SentenceTransformer("all-MiniLM-L6-v2")  # Replace with the actual model used
+
 
 def load_embeddings():
     """
@@ -32,6 +25,7 @@ def load_embeddings():
         raise FileNotFoundError(f"Embeddings file not found at {EMBEDDINGS_FILE}.")
     embedding_data = torch.load(EMBEDDINGS_FILE, map_location=torch.device("cpu"))
     return embedding_data["embeddings"], embedding_data["texts"]
+
 
 def search_embeddings(query, top_k=5):
     """
@@ -50,109 +44,132 @@ def search_embeddings(query, top_k=5):
     results = [texts[idx] for idx in top_results.indices]
     return results
 
-def generate_structured_chunks():
-    """
-    Generate `structured_chunks.json` by using embeddings search and OpenAI API for refinement.
-    """
-    structured_chunks = []
 
-    for field in FIELDS:
+def load_domain_faqs(domain_type):
+    """
+    Load domain-specific FAQs from the domain_faqs.json file.
+    """
+    if not os.path.exists(DOMAIN_FAQ_FILE):
+        raise FileNotFoundError(f"Domain FAQs file not found at {DOMAIN_FAQ_FILE}.")
+    with open(DOMAIN_FAQ_FILE, "r", encoding="utf-8") as file:
+        faqs = json.load(file)
+    return faqs.get(domain_type, [])
+
+
+def load_business_config():
+    """
+    Load business configuration, including domain type.
+    """
+    if not os.path.exists(BUSINESS_CONFIG_FILE):
+        raise FileNotFoundError(f"Business config file not found at {BUSINESS_CONFIG_FILE}.")
+    with open(BUSINESS_CONFIG_FILE, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def generate_faq_responses():
+    """
+    Generate FAQ responses using domain-specific questions and embeddings search.
+    """
+    # Load business configuration
+    business_config = load_business_config()
+    domain_type = business_config.get("domain_type")
+    if not domain_type:
+        raise ValueError("Domain type is missing in the business config file.")
+
+    # Load domain-specific FAQs
+    faqs = load_domain_faqs(domain_type)
+    faq_responses = []
+
+    for question in faqs:
         # Step 1: Search embeddings for the top-k most relevant chunks
-        top_chunks = search_embeddings(field, top_k=5)
+        top_chunks = search_embeddings(question, top_k=5)
 
-        # Step 2: Use OpenAI API to refine the chunk content
+        # Step 2: Use OpenAI API to refine the content for the FAQ
         prompt = f"""
-        Based on the following relevant information, extract concise and specific details for the field "{field}".
+        Based on the following relevant information, provide a concise and specific answer to the question: "{question}".
 
         Relevant Information:
         {"\n".join(top_chunks)}
-        
-        Provide the result as plain text.
         """
         response = client.chat.completions.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are an assistant specialized in extracting structured business information."},
+                {"role": "system", "content": "You are an assistant specialized in generating FAQs for businesses."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.7
         )
-        refined_content = response.choices[0].message.content.strip()
+        answer = response.choices[0].message.content.strip()
 
-        # Step 3: Append the field and refined content to the structured chunks
-        structured_chunks.append({"header": field, "content": refined_content})
+        # Step 3: Add question, answer, and metadata tags to structured chunks
+        metadata_tags = generate_tags(question)  # Generate tags for variations
+        faq_responses.append({
+            "question": question,
+            "answer": answer,
+            "metadata": metadata_tags
+        })
 
-    # Step 4: Save structured chunks to JSON
-    os.makedirs(os.path.dirname(CHUNKS_FILE), exist_ok=True)
-    with open(CHUNKS_FILE, "w", encoding="utf-8") as file:
-        json.dump(structured_chunks, file, indent=4)
-    print("Structured chunks created and saved successfully!")
+    # Save to faq_autogen_responses.json
+    save_autogen_responses(faq_responses)
+    print("FAQ responses generated and saved successfully!")
 
-def load_chunks():
+
+def generate_tags(question):
     """
-    Load structured chunks from the JSON file.
+    Generate metadata tags for a given question by inferring variations.
     """
-    if os.path.exists(CHUNKS_FILE):
-        with open(CHUNKS_FILE, "r", encoding="utf-8") as file:
+    # Example static implementation; can be extended for dynamic generation
+    synonyms = {
+        "operating hours": ["working hours", "business hours", "clinic hours"],
+        "location": ["address", "clinic location"],
+        "services": ["offerings", "treatments"]
+    }
+    tags = []
+    for key, variations in synonyms.items():
+        if key in question.lower():
+            tags.extend([key] + variations)
+    return tags
+
+
+def load_autogen_responses():
+    """
+    Load auto-generated FAQ responses from the JSON file.
+    """
+    if os.path.exists(FAQ_AUTOGEN_RESPONSES_FILE):
+        with open(FAQ_AUTOGEN_RESPONSES_FILE, "r", encoding="utf-8") as file:
             return json.load(file)
-    raise FileNotFoundError(f"Structured chunks file not found at {CHUNKS_FILE}.")
+    raise FileNotFoundError(f"Auto-generated FAQ responses file not found at {FAQ_AUTOGEN_RESPONSES_FILE}.")
 
-def save_chunks(chunks):
-    """
-    Save the updated chunks to the JSON file.
-    """
-    os.makedirs(os.path.dirname(CHUNKS_FILE), exist_ok=True)
-    with open(CHUNKS_FILE, "w", encoding="utf-8") as file:
-        json.dump(chunks, file, indent=4)
-    print("Chunks saved successfully!")
 
-def modify_chunk(header, new_content):
+def save_autogen_responses(responses):
     """
-    Modify the content of a specific chunk by its header.
+    Save auto-generated FAQ responses to the JSON file.
     """
-    chunks = load_chunks()
-    for chunk in chunks:
-        if chunk["header"].lower() == header.lower():
-            chunk["content"] = new_content
-            save_chunks(chunks)
-            return f"Updated chunk: {header}"
-    return f"Header '{header}' not found."
+    os.makedirs(os.path.dirname(FAQ_AUTOGEN_RESPONSES_FILE), exist_ok=True)
+    with open(FAQ_AUTOGEN_RESPONSES_FILE, "w", encoding="utf-8") as file:
+        json.dump(responses, file, indent=4)
 
-def view_chunks():
-    """
-    View all chunks as a formatted string.
-    """
-    chunks = load_chunks()
-    for chunk in chunks:
-        print(f"{chunk['header']}:\n{chunk['content']}\n{'-' * 40}")
 
-def create_embeddings_for_chunks():
+def create_embeddings_for_faq_responses():
     """
-    Generate embeddings for structured chunks (header + content) and save them to a file.
+    Generate embeddings for FAQ responses (question + answer) and save them to a file.
     """
-    # Load structured chunks
-    chunks = load_chunks()
+    # Load auto-generated and manual FAQ responses
+    autogen_responses = load_autogen_responses()
+    manual_responses = []
+    if os.path.exists(FAQ_MANUAL_RESPONSES_FILE):
+        with open(FAQ_MANUAL_RESPONSES_FILE, "r", encoding="utf-8") as file:
+            manual_responses = json.load(file)
 
-    # Prepare combined texts (header + content) for embeddings
-    combined_texts = [f"{chunk['header']}: {chunk['content']}" for chunk in chunks]
+    # Combine responses
+    all_responses = autogen_responses + manual_responses
+
+    # Prepare combined texts (question + answer) for embeddings
+    combined_texts = [f"Question: {faq['question']} Answer: {faq['answer']}" for faq in all_responses]
 
     # Generate embeddings
     embeddings = model.encode(combined_texts, convert_to_tensor=True)
 
     # Save embeddings and corresponding texts
-    embeddings_file = "data/structured_embeddings.pt"
-    torch.save({"embeddings": embeddings, "texts": combined_texts}, embeddings_file)
-    print(f"Embeddings for structured chunks saved to {embeddings_file}.")
-
-def save_chunks(chunks):
-    """
-    Save the updated chunks to the JSON file and regenerate embeddings.
-    """
-    # Save the updated chunks to structured_chunks.json
-    os.makedirs(os.path.dirname(CHUNKS_FILE), exist_ok=True)
-    with open(CHUNKS_FILE, "w", encoding="utf-8") as file:
-        json.dump(chunks, file, indent=4)
-    print("Chunks saved successfully!")
-
-    # Regenerate embeddings for the updated chunks
-    create_embeddings_for_chunks()
+    torch.save({"embeddings": embeddings, "texts": combined_texts}, FAQ_RESPONSES_EMBEDDINGS_FILE)
+    print(f"Embeddings for FAQ responses saved to {FAQ_RESPONSES_EMBEDDINGS_FILE}.")

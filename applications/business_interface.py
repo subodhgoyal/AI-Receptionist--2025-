@@ -10,43 +10,56 @@ sys.path.append(project_root)
 
 from sentence_transformers import SentenceTransformer
 from src.webscraping_agent import scrape_website, chunk_text, generate_embeddings
-from src.content_manager import generate_structured_chunks, save_chunks, load_chunks
+from src.content_manager import generate_faq_responses, save_autogen_responses, load_autogen_responses
 
 # File paths
-EMBEDDINGS_FILE = "data/structured_embeddings.pt"
-STRUCTURED_CHUNKS_FILE = "data/structured_chunks.json"
-ADDITIONAL_INFO_FILE = "data/additional_info.json"
+EMBEDDINGS_FILE = "data/faq_responses_embeddings.pt"
+AUTOGEN_FAQS_FILE = "data/faq_autogen_responses.json"
+MANUAL_FAQS_FILE = "data/faq_manual_responses.json"
+BUSINESS_CONFIG_FILE = "data/business_config.json"
 
 # Initialize model
 model = SentenceTransformer("all-MiniLM-L6-v2")  # Replace with the correct model
 
 # Utility functions
-def load_additional_info():
-    """Load additional info from the JSON file or initialize an empty list."""
-    if os.path.exists(ADDITIONAL_INFO_FILE):
-        with open(ADDITIONAL_INFO_FILE, "r", encoding="utf-8") as file:
+def save_business_config(domain_type):
+    """
+    Save the selected business domain type to business_config.json.
+    """
+    config = {"domain_type": domain_type}
+    os.makedirs(os.path.dirname(BUSINESS_CONFIG_FILE), exist_ok=True)
+    with open(BUSINESS_CONFIG_FILE, "w", encoding="utf-8") as file:
+        json.dump(config, file, indent=4)
+    st.success(f"Business domain type '{domain_type}' saved successfully!")
+
+def load_manual_faqs():
+    """Load additional (manual) Q&A info from the JSON file or initialize an empty list."""
+    if os.path.exists(MANUAL_FAQS_FILE):
+        with open(MANUAL_FAQS_FILE, "r", encoding="utf-8") as file:
             return json.load(file)
     return []  # Return an empty list if the file doesn't exist
 
-def save_additional_info(additional_info):
-    """Save additional info to the JSON file."""
-    os.makedirs(os.path.dirname(ADDITIONAL_INFO_FILE), exist_ok=True)
-    with open(ADDITIONAL_INFO_FILE, "w", encoding="utf-8") as file:
-        json.dump(additional_info, file, indent=4)
+def save_manual_faqs(manual_faqs):
+    """Save additional (manual) Q&A info to the JSON file."""
+    os.makedirs(os.path.dirname(MANUAL_FAQS_FILE), exist_ok=True)
+    with open(MANUAL_FAQS_FILE, "w", encoding="utf-8") as file:
+        json.dump(manual_faqs, file, indent=4)
 
 def generate_combined_embeddings():
     """
-    Generate embeddings by combining structured chunks and additional info.
+    Generate embeddings by combining auto-generated FAQs and additional (manual) Q&A.
     """
-    # Load structured chunks and additional info
-    structured_chunks = load_chunks() if os.path.exists(STRUCTURED_CHUNKS_FILE) else []
-    additional_info = load_additional_info() if os.path.exists(ADDITIONAL_INFO_FILE) else []
+    # Load auto-generated FAQs and additional (manual) Q&A
+    autogen_faqs = load_autogen_responses() if os.path.exists(AUTOGEN_FAQS_FILE) else []
+    manual_faqs = load_manual_faqs() if os.path.exists(MANUAL_FAQS_FILE) else []
 
     # Combine both datasets
-    combined_chunks = structured_chunks + additional_info
+    combined_faqs = autogen_faqs + manual_faqs
 
-    # Create embeddings
-    texts = [f"{chunk['header']}: {chunk['content']}" for chunk in combined_chunks]
+    # Prepare texts for embeddings (using question and answer)
+    texts = [f"Question: {faq['question']} Answer: {faq['answer']}" for faq in combined_faqs]
+
+    # Generate embeddings
     embeddings = model.encode(texts, convert_to_tensor=True)
 
     # Save embeddings and text
@@ -57,8 +70,22 @@ def generate_combined_embeddings():
 # App Title
 st.title("Business Interface - AI Assistant Setup")
 
-# Step 1: Input Business Website
-st.header("Step 1: Enter Business Website")
+# Step 1: Select Business Type
+st.header("Step 1: Select Business Type")
+domain_type = st.selectbox(
+    "Select your business type",
+    ["Dental Clinic", "Veterinary Clinic"],
+    help="Choose the type of business for the AI Assistant setup."
+)
+
+if st.button("Save Business Type"):
+    if domain_type:
+        save_business_config(domain_type.lower().replace(" ", "_"))
+    else:
+        st.error("Please select a business type.")
+
+# Step 2: Input Business Website
+st.header("Step 2: Enter Business Website")
 business_url = st.text_input("Website URL", placeholder="Enter your business website URL here")
 
 if st.button("Scrape Website"):
@@ -74,56 +101,73 @@ if st.button("Scrape Website"):
                 generate_embeddings(chunks)
                 st.success("Chunks and embeddings generated successfully!")
 
-            # Generate structured chunks
-            with st.spinner("Creating structured chunks..."):
-                generate_structured_chunks()
-                st.success("Structured chunks created successfully!")
-        st.info("Proceed to Step 2 to review and edit structured chunks.")
+            # Generate FAQ-based structured chunks
+            with st.spinner("Generating FAQ responses..."):
+                generate_faq_responses()
+                st.success("FAQ responses generated successfully!")
+        st.info("Proceed to Step 3 to review and edit FAQs.")
     else:
         st.error("Please enter a valid website URL.")
 
-# Step 2: Review and Edit Structured Chunks
-st.header("Step 2: Review and Edit Structured Chunks")
-if os.path.exists(STRUCTURED_CHUNKS_FILE):
-    chunks = load_chunks()
-    for chunk in chunks:
-        st.subheader(chunk["header"])
-        chunk["content"] = st.text_area(f"Edit {chunk['header']}", value=chunk["content"], height=100)
+# Step 3: Review and Edit Auto-Generated FAQ Responses
+st.header("Step 3: Review and Edit Auto-Generated FAQ Responses")
+if os.path.exists(AUTOGEN_FAQS_FILE):
+    autogen_faqs = load_autogen_responses()
+    for idx, faq in enumerate(autogen_faqs):
+        st.subheader(f"FAQ #{idx + 1}")
+        st.text(f"Question: {faq['question']}")
+        faq["answer"] = st.text_area(
+            f"Edit Answer for Question #{idx + 1}", value=faq["answer"], height=100
+        )
+        faq["metadata"] = st.text_area(
+            f"Edit Metadata Tags for Question #{idx + 1} (comma-separated)",
+            value=", ".join(faq["metadata"]),
+            height=70,
+        ).split(", ")
 
-    if st.button("Save Changes to Structured Chunks"):
-        with st.spinner("Saving changes and regenerating structured embeddings..."):
-            save_chunks(chunks)
-            st.success("Structured chunks updated successfully!")
+    if st.button("Save Changes to Auto-Generated FAQs"):
+        save_autogen_responses(autogen_faqs)
+        st.success("Changes to auto-generated FAQs saved successfully!")
 else:
-    st.info("No structured chunks available. Please complete Step 1 first.")
+    st.info("No auto-generated FAQs available. Please complete Step 2 first.")
 
-# Step 3: Add Additional Info
-st.header("Step 3: Add Additional Info")
-additional_info = load_additional_info()
-new_header = st.text_input("New Header", placeholder="Enter the header (e.g., FAQs, Offers, etc.)")
-new_content = st.text_area("New Content", placeholder="Enter the content for the new header", height=100)
+# Step 4: Add Additional Q&A
+st.header("Step 4: Add Additional Q&A")
+manual_faqs = load_manual_faqs()  # Updated function name
+new_question = st.text_input("New Question", placeholder="Enter the question (e.g., What services do you offer?)")
+new_answer = st.text_area("New Answer", placeholder="Enter the answer for the question", height=100)
 
-if st.button("Add Additional Info"):
-    if new_header and new_content:
-        additional_info.append({"header": new_header, "content": new_content})
-        save_additional_info(additional_info)
-        st.success("Additional info added successfully!")
+if st.button("Add Additional Q&A"):
+    if new_question and new_answer:
+        manual_faqs.append({"question": new_question, "answer": new_answer, "metadata": []})
+        save_manual_faqs(manual_faqs)  # Updated function name
+        st.success("Additional Q&A added successfully!")
     else:
-        st.error("Both header and content are required.")
+        st.error("Both question and answer are required.")
 
-# Display existing additional info
-if additional_info:
-    st.subheader("Existing Additional Info")
-    for info in additional_info:
-        st.subheader(info["header"])
-        info["content"] = st.text_area(f"Edit {info['header']}", value=info["content"], height=100)
+# Display existing additional Q&A
+if manual_faqs:
+    st.subheader("Existing Additional Q&A")
+    for faq in manual_faqs:
+        st.subheader(faq["question"])  # Display the question
+        faq["answer"] = st.text_area(
+            f"Edit Answer for '{faq['question']}'", 
+            value=faq["answer"], 
+            height=100
+        )
+        faq["metadata"] = st.text_area(
+            f"Edit Metadata for '{faq['question']}'",
+            value=", ".join(faq.get("metadata", [])),
+            height=70
+        )
 
-    if st.button("Save Changes to Additional Info"):
-        save_additional_info(additional_info)
-        st.success("Changes to additional info saved successfully!")
+    if st.button("Save Changes to Additional Q&A"):
+        save_manual_faqs(manual_faqs)  # Updated function name
+        st.success("Changes to additional Q&A saved successfully!")
 
-# Step 4: Complete Setup
-st.header("Step 4: Complete AI Assistant Setup")
+
+# Step 5: Complete Setup
+st.header("Step 5: Complete AI Assistant Setup")
 
 if st.button("Complete Setup"):
     with st.spinner("Generating unified embeddings for your AI Assistant..."):

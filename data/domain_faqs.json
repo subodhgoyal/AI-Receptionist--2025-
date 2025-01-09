@@ -1,0 +1,40 @@
+{
+    "dental_clinic": [
+      "What are your operating hours?",
+      "Do you accept walk-ins?",
+      "What insurances do you accept?",
+      "How can I schedule an appointment?",
+      "What services do you offer?",
+      "Do you provide emergency dental care?",
+      "How much does a cleaning or check-up cost?",
+      "What payment methods do you accept?",
+      "Are there any special offers or discounts for new patients?",
+      "What should I bring for my first visit?",
+      "Do you treat children or provide pediatric dentistry?",
+      "What are your policies for missed or canceled appointments?",
+      "How do I contact you for after-hours dental emergencies?",
+      "Do you offer teeth whitening or cosmetic dentistry services?",
+      "Are you accepting new patients?",
+      "Do you offer sedation options for anxious patients?"
+    ],
+    "veterinary_clinic": [
+      "What are your operating hours?",
+      "What types of pets do you treat?",
+      "Do you provide emergency veterinary services?",
+      "How can I schedule an appointment?",
+      "What services do you offer for pets?",
+      "What vaccinations do you provide?",
+      "Do you offer spaying or neutering services?",
+      "How much does a routine check-up cost for a pet?",
+      "What payment methods do you accept?",
+      "Are you accepting new patients or pets?",
+      "What should I bring for my pet's first visit?",
+      "Do you provide dental care for pets?",
+      "Do you offer boarding or grooming services?",
+      "What is your policy for missed or canceled appointments?",
+      "How do I contact you for after-hours emergencies?",
+      "Do you offer euthanasia or end-of-life services for pets?",
+      "Do you sell pet medications or food in the clinic?"
+    ]
+  }
+  

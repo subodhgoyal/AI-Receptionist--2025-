@@ -9,7 +9,7 @@ sys.path.append(project_root)
 from src.webscraping_agent import scrape_website, chunk_text, generate_embeddings
 
 # Test the functions
-url = "https://www.dentistryatlasalle.com"  # Replace with your target URL
+url = "https://www.getbrisk.ai"  # Replace with your target URL
 raw_text = scrape_website(url)
 print("Scraping completed!")
 

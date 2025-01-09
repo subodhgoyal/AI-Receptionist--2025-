@@ -1,0 +1,16 @@
+[
+    {
+        "user": "where is your clinic located?",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "are you open on saturdays",
+        "assistant": "Yes, we are open on Saturdays. Our operating hours on Saturday are from 8 AM to 3 PM.",
+        "retrieved_chunks": [
+            "Question: What are your operating hours? Answer: Our operating hours are from 9 AM to 7 PM on Monday to Thursday, 8 AM to 3 PM on Saturday. Please note that we are closed on Fridays and Sundays."
+        ]
+    }
+]
