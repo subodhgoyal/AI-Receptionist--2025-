@@ -1,0 +1,16 @@
+[
+    {
+        "user": "hi",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "what do you do",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    }
+]

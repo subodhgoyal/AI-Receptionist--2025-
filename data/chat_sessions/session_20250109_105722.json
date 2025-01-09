@@ -1,0 +1,9 @@
+[
+    {
+        "user": "do you offer any marketing services for small and medium businesses?",
+        "assistant": "Yes, we do. Through our affiliate businesses in the technology space, we offer AI-generated marketing content specifically tailored for small and medium businesses.",
+        "retrieved_chunks": [
+            "Do you have any other affiliate businesses: Yes, we do ...we have a few affiliate business in the technology space that offer AI generated marketing content for small and medium businesses."
+        ]
+    }
+]

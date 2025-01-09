@@ -1,0 +1,30 @@
+[
+    {
+        "user": "hi, what's your business name",
+        "assistant": "Hello, our business name is Brisk.",
+        "retrieved_chunks": [
+            "Business Name: Business Name: Brisk"
+        ]
+    },
+    {
+        "user": "where are you located?",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "what type of products and services do you offer",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "what are you business hours",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    }
+]

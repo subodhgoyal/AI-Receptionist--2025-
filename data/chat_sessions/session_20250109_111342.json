@@ -1,0 +1,38 @@
+[
+    {
+        "user": "what's your business name",
+        "assistant": "Our business name is Brisk.",
+        "retrieved_chunks": [
+            "Business Name: Business Name: Brisk"
+        ]
+    },
+    {
+        "user": "what are your opening horus",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "are you open on sundays",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "what type of ai content marketing do you offer",
+        "assistant": "We offer a product called \"Marketing Genie\" that provides AI-based content creation and publishing. This tool is designed to generate leads for small and medium-sized businesses. It is a great solution to fill in gaps in time, expertise, and resources.",
+        "retrieved_chunks": [
+            "Products & Services Overview: Products & Services Overview: \n\nBrisk AI provides solutions to automate business growth. Its products include the \"Marketing Genie\", which offers autonomous content creation and publishing to generate leads, and the \"AI Concierge\", a real-time customer engagement tool designed to maximize lead conversion. Both products are aimed at plugging time, expertise, and resource gaps for small and medium-sized businesses.",
+            "Do you have any other affiliate businesses: Yes, we do ...we have a few affiliate business in the technology space that offer AI generated marketing content for small and medium businesses."
+        ]
+    },
+    {
+        "user": "do you have any affiliate businesses?",
+        "assistant": "Yes, we do have affiliate businesses. We have several in the technology space that offer AI-generated marketing content for small and medium businesses.",
+        "retrieved_chunks": [
+            "Do you have any other affiliate businesses: Yes, we do ...we have a few affiliate business in the technology space that offer AI generated marketing content for small and medium businesses."
+        ]
+    }
+]

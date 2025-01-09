@@ -1,0 +1,34 @@
+[
+    {
+        "header": "Business Name",
+        "content": "Business Name: Brisk"
+    },
+    {
+        "header": "Phone Number",
+        "content": "4379617100"
+    },
+    {
+        "header": "Email",
+        "content": "The provided information does not include any details regarding an \"Email\"."
+    },
+    {
+        "header": "Address/Location",
+        "content": "Address/Location: Toronto, Ontario, CA"
+    },
+    {
+        "header": "Business Hours",
+        "content": "We are open 24x7"
+    },
+    {
+        "header": "Products & Services Overview",
+        "content": "Products & Services Overview: \n\nBrisk AI provides solutions to automate business growth. Its products include the \"Marketing Genie\", which offers autonomous content creation and publishing to generate leads, and the \"AI Concierge\", a real-time customer engagement tool designed to maximize lead conversion. Both products are aimed at plugging time, expertise, and resource gaps for small and medium-sized businesses."
+    },
+    {
+        "header": "Team Overview",
+        "content": "Company Name: Brisk\nIndustry: Technology, Information and Internet\nLocation: Toronto, Ontario, Canada\nNumber of Employees: 7\nBusiness Focus: AI Autopilot for Small Business Marketing\nKey Solutions: Marketing Genie (Autonomous content creation and publishing), AI Concierge (Real-time customer engagement)\nWebsite: https://www.getbrisk.ai\nLinkedIn: https://www.linkedin.com/company/getbriskai"
+    },
+    {
+        "header": "How to Schedule an Appointment",
+        "content": "You can just walk-in to  our office."
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "user": "hi",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "are you working now",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "what is your business name",
+        "assistant": "Our business name is Brisk. How can we assist you further?",
+        "retrieved_chunks": [
+            "Business Name: Business Name: Brisk"
+        ]
+    },
+    {
+        "user": "what are you business hours on sunday",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "are you open 24x7?",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    }
+]
