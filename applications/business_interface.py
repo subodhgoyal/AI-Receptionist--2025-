@@ -111,60 +111,138 @@ if st.button("Scrape Website"):
 
 # Step 3: Review and Edit Auto-Generated FAQ Responses
 st.header("Step 3: Review and Edit Auto-Generated FAQ Responses")
+
 if os.path.exists(AUTOGEN_FAQS_FILE):
     autogen_faqs = load_autogen_responses()
-    for idx, faq in enumerate(autogen_faqs):
-        st.subheader(f"FAQ #{idx + 1}")
-        st.text(f"Question: {faq['question']}")
-        faq["answer"] = st.text_area(
-            f"Edit Answer for Question #{idx + 1}", value=faq["answer"], height=100
-        )
-        faq["metadata"] = st.text_area(
-            f"Edit Metadata Tags for Question #{idx + 1} (comma-separated)",
-            value=", ".join(faq["metadata"]),
-            height=70,
-        ).split(", ")
+    
+    if not autogen_faqs:
+        st.info("No auto-generated FAQs available. The file exists but is empty.")
+    else:
+        for idx, faq in enumerate(autogen_faqs):
+            # Define callback functions for this FAQ
+            def update_autogen_faq(idx=idx):
+                autogen_faqs[idx] = {
+                    "question": st.session_state[f"autogen_question_{idx}"],
+                    "answer": st.session_state[f"autogen_answer_{idx}"],
+                    "metadata": [tag.strip() for tag in st.session_state[f"autogen_metadata_{idx}"].split(",")]
+                }
+                save_autogen_responses(autogen_faqs)
 
-    if st.button("Save Changes to Auto-Generated FAQs"):
-        save_autogen_responses(autogen_faqs)
-        st.success("Changes to auto-generated FAQs saved successfully!")
+            def delete_autogen_faq(idx=idx):
+                autogen_faqs.pop(idx)
+                save_autogen_responses(autogen_faqs)
+
+            # Create expandable section for each FAQ
+            with st.expander(f"FAQ #{idx + 1}: {faq['question'][:80]}..."):
+                st.text_input(
+                    "Question",
+                    value=faq["question"],
+                    key=f"autogen_question_{idx}"
+                )
+                st.text_area(
+                    "Answer",
+                    value=faq["answer"],
+                    height=100,
+                    key=f"autogen_answer_{idx}"
+                )
+                st.text_input(
+                    "Metadata Tags (comma-separated)",
+                    value=", ".join(faq["metadata"]),
+                    key=f"autogen_metadata_{idx}"
+                )
+
+                # Create two columns for Update and Delete buttons
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.button("Update", key=f"update_autogen_{idx}", on_click=update_autogen_faq):
+                        st.success("FAQ updated successfully!")
+                        st.rerun()
+                with col2:
+                    if st.button("Delete", key=f"delete_autogen_{idx}", on_click=delete_autogen_faq):
+                        st.success("FAQ deleted successfully!")
+                        st.rerun()
 else:
     st.info("No auto-generated FAQs available. Please complete Step 2 first.")
 
 # Step 4: Add Additional Q&A
 st.header("Step 4: Add Additional Q&A")
-manual_faqs = load_manual_faqs()  # Updated function name
-new_question = st.text_input("New Question", placeholder="Enter the question (e.g., What services do you offer?)")
-new_answer = st.text_area("New Answer", placeholder="Enter the answer for the question", height=100)
 
-if st.button("Add Additional Q&A"):
-    if new_question and new_answer:
-        manual_faqs.append({"question": new_question, "answer": new_answer, "metadata": []})
-        save_manual_faqs(manual_faqs)  # Updated function name
-        st.success("Additional Q&A added successfully!")
-    else:
-        st.error("Both question and answer are required.")
+# Initialize session state for manual Q&A
+if "manual_faqs" not in st.session_state:
+    st.session_state.manual_faqs = load_manual_faqs()  # Load existing FAQs from file
+if "form_submitted" not in st.session_state:
+    st.session_state.form_submitted = False
 
-# Display existing additional Q&A
-if manual_faqs:
+# Callback function for form submission
+def handle_form_submission():
+    if st.session_state.new_question.strip() and st.session_state.new_answer.strip():
+        metadata_list = [tag.strip() for tag in st.session_state.new_metadata.split(",")] if st.session_state.new_metadata else []
+        st.session_state.manual_faqs.append({
+            "question": st.session_state.new_question,
+            "answer": st.session_state.new_answer,
+            "metadata": metadata_list
+        })
+        save_manual_faqs(st.session_state.manual_faqs)
+        st.session_state.form_submitted = True
+        
+        # Reset form by updating the keys
+        st.session_state.new_question = ""
+        st.session_state.new_answer = ""
+        st.session_state.new_metadata = ""
+
+# Create a form for new Q&A input
+st.text_input("New Question", 
+             placeholder="Enter the question",
+             key="new_question")
+st.text_area("New Answer", 
+             placeholder="Enter the answer",
+             height=100,
+             key="new_answer")
+st.text_input("New Metadata (comma-separated)",
+             placeholder="Enter metadata tags",
+             key="new_metadata")
+st.button("Add Q&A", on_click=handle_form_submission)
+
+# Display success message if form was submitted
+if st.session_state.form_submitted:
+    st.success("Q&A added successfully!")
+    st.session_state.form_submitted = False
+
+# Display existing Q&A
+if st.session_state.manual_faqs:
     st.subheader("Existing Additional Q&A")
-    for faq in manual_faqs:
-        st.subheader(faq["question"])  # Display the question
-        faq["answer"] = st.text_area(
-            f"Edit Answer for '{faq['question']}'", 
-            value=faq["answer"], 
-            height=100
-        )
-        faq["metadata"] = st.text_area(
-            f"Edit Metadata for '{faq['question']}'",
-            value=", ".join(faq.get("metadata", [])),
-            height=70
-        )
+    
+    for idx, faq in enumerate(st.session_state.manual_faqs):
+        with st.expander(f"Q&A #{idx + 1}: {faq['question'][:50]}..."):
+            # Callback functions for update and delete
+            def update_qa(idx=idx):
+                st.session_state.manual_faqs[idx] = {
+                    "question": st.session_state[f"edit_question_{idx}"],
+                    "answer": st.session_state[f"edit_answer_{idx}"],
+                    "metadata": [tag.strip() for tag in st.session_state[f"edit_metadata_{idx}"].split(",")]
+                }
+                save_manual_faqs(st.session_state.manual_faqs)
 
-    if st.button("Save Changes to Additional Q&A"):
-        save_manual_faqs(manual_faqs)  # Updated function name
-        st.success("Changes to additional Q&A saved successfully!")
+            def delete_qa(idx=idx):
+                st.session_state.manual_faqs.pop(idx)
+                save_manual_faqs(st.session_state.manual_faqs)
 
+            st.text_input("Question", 
+                         value=faq["question"],
+                         key=f"edit_question_{idx}")
+            st.text_area("Answer", 
+                        value=faq["answer"],
+                        height=100,
+                        key=f"edit_answer_{idx}")
+            st.text_input("Metadata (comma-separated)", 
+                         value=", ".join(faq["metadata"]),
+                         key=f"edit_metadata_{idx}")
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                st.button("Update", key=f"update_{idx}", on_click=update_qa)
+            with col2:
+                st.button("Delete", key=f"delete_{idx}", on_click=delete_qa)
 
 # Step 5: Complete Setup
 st.header("Step 5: Complete AI Assistant Setup")

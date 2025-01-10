@@ -1,6 +1,8 @@
 {
     "dental_clinic": [
+      "What is your clinic's name?"
       "What are your operating hours?",
+      "Where is your clinic located? And, how to get there?"
       "Do you accept walk-ins?",
       "What insurances do you accept?",
       "How can I schedule an appointment?",
@@ -18,7 +20,9 @@
       "Do you offer sedation options for anxious patients?"
     ],
     "veterinary_clinic": [
+      "What is your clinic's name?"
       "What are your operating hours?",
+      "Where is your clinic located? And, how to get there?"
       "What types of pets do you treat?",
       "Do you provide emergency veterinary services?",
       "How can I schedule an appointment?",

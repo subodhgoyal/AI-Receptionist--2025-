@@ -61,6 +61,7 @@ def scrape_website(url):
             sub_text = "\n".join(
                 tag.get_text(strip=True)
                 for tag in sub_soup.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li'])
+                if not (tag.get("style") and ("display: none" in tag["style"] or "visibility: hidden" in tag["style"]))
             )
 
             # Append URL-prefixed text to raw_data
@@ -73,6 +74,7 @@ def scrape_website(url):
     main_text = "\n".join(
         tag.get_text(strip=True)
         for tag in soup.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li'])
+        if not (tag.get("style") and ("display: none" in tag["style"] or "visibility: hidden" in tag["style"]))
     )
     raw_data = f"URL: {url}\n{main_text}\n\n" + raw_data
 

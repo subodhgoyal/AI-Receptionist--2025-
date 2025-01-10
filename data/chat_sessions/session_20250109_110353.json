@@ -1,9 +1,0 @@
-[
-    {
-        "user": "hey, what time are you open on Saturdays?",
-        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
-        "retrieved_chunks": [
-            "No relevant information found."
-        ]
-    }
-]

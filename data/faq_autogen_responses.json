@@ -1,7 +1,7 @@
 [
     {
         "question": "What are your operating hours?",
-        "answer": "Our operating hours are from Monday to Friday, up until 7pm and on Saturdays from 10:00am to 4:00pm.",
+        "answer": "Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm.",
         "metadata": [
             "operating hours",
             "working hours",
@@ -11,22 +11,22 @@
     },
     {
         "question": "Do you accept walk-ins?",
-        "answer": "No, we do not accept walk-ins due to our social distancing policy in the clinic. However, we offer teledentistry services and require all new patients to fill out online paperwork beforehand. We also have convenient public transportation access and free on-site parking.",
+        "answer": "No, we currently do not accept walk-ins due to our social distancing measures in the clinic. However, we do offer teledentistry services and require all new patients to fill out their paperwork online beforehand. We also offer early morning and weekend appointments for your convenience.",
         "metadata": []
     },
     {
         "question": "What insurances do you accept?",
-        "answer": "We accept most insurance plans and offer Direct Billing, also known as Assignment of Benefits. This means our administrative team will electronically submit your insurance papers directly to your insurance company on your behalf and accept their payment directly in our office. You will only need to pay the difference that your insurance company does not cover. However, some insurance companies do not allow payment to be sent to our office, in which case payment in full for services will be required. Please note that our treatment recommendations are always based on your dental needs, regardless of your dental plan coverage.",
+        "answer": "We accept most insurances and offer direct billing, where we submit your insurance papers to your insurance company electronically and accept their payment directly. However, there are a few insurance companies that don't allow payment to come to our office, and in these cases, full payment for services is required. Your treatment will always be based on your dental needs, regardless of your dental plan coverage.",
         "metadata": []
     },
     {
         "question": "How can I schedule an appointment?",
-        "answer": "To schedule an appointment, please contact our office directly. We will provide you with available dates and times based on your preference. After scheduling, you will receive a hygiene reminder a few weeks prior to the appointment and a confirmation call or email two weeks before hygiene appointments. A courtesy reminder will also be sent the day before all appointments. Please remember it's your responsibility to ensure you can attend the appointment. If you need to reschedule or cancel, please provide a minimum of 2 business days' notice to avoid a missed appointment fee.",
+        "answer": "To schedule an appointment, you need to contact our office in advance. However, please note that due to high demand, we require at least 2 business days' notice should you need to reschedule or cancel. We send courtesy reminders a few weeks prior to the appointment and confirmation calls or emails two weeks before, and a reminder the day before. It's your responsibility to ensure you're present for your appointment. Failure to do so may result in a missed appointment fee.",
         "metadata": []
     },
     {
         "question": "What services do you offer?",
-        "answer": "We offer a range of dental services including Family Dentistry, Children\u2019s Dentistry, Emergency Dentistry, and Dental Hygiene & Teeth Cleanings. We cater to the needs of you and your entire family. If you need a service not mentioned here, please feel free to contact us at (416) 429-3317.",
+        "answer": "We offer a wide range of services including Family Dentistry, Children\u2019s Dentistry, Emergency Dentistry, and Dental Hygiene & Teeth Cleanings. Additionally, we provide digital promotion services such as SEO/SEM Visibility, Organic Ranking Keywords, PPC (Pay per Click), Google Business Promotion, and Social Media & Reputation Management. We also offer creative services like Logo & Branding Design, Professional Photography & Videography, and Branded Merchandise. Our web design services include Dental Websites, Chiropractic Websites, Physiotherapy Websites, Small & Medium Business Websites, and Website Refresh. Other services include CPM Management, Practice Support & Solutions, Call Tracking, and Dental Educational Videos. If you require a service that is not listed, please contact us at (416) 429-3317.",
         "metadata": [
             "services",
             "offerings",
@@ -35,47 +35,47 @@
     },
     {
         "question": "Do you provide emergency dental care?",
-        "answer": "Yes, we do provide emergency dental care. We strive to see and treat all emergency cases as quickly as possible, regardless of the size of the injury or whether you're a regular patient. We also have specific appointment times available for such emergencies.",
+        "answer": "Yes, we do provide emergency dental care. We make every effort to see and treat patients as soon as possible, regardless of the size of the dental injury. We even keep appointment times available specifically for emergency cases. This service is available to all, even if you are not a regular patient of ours.",
         "metadata": []
     },
     {
         "question": "How much does a cleaning or check-up cost?",
-        "answer": "The information provided does not include specific details on the cost of a cleaning or check-up.",
+        "answer": "The information provided does not include details on the cost of a cleaning or check-up.",
         "metadata": []
     },
     {
         "question": "What payment methods do you accept?",
-        "answer": "We accept several payment methods for your convenience, including Cash, Debit Card, Visa, and MasterCard.",
+        "answer": "We accept several payment methods including Cash, Debit Card, Visa, and MasterCard for your convenience.",
         "metadata": []
     },
     {
         "question": "Are there any special offers or discounts for new patients?",
-        "answer": "The information provided does not specify whether there are any special offers or discounts for new patients.",
+        "answer": "The provided information does not specify if there are any special offers or discounts for new patients at Dolphin Dental.",
         "metadata": []
     },
     {
         "question": "What should I bring for my first visit?",
-        "answer": "For the first visit, you should bring your child to the dentist within 6 months of the eruption of their first tooth or by the age of one, whichever comes first. This is according to the recommendation by the Canadian Dental Association. It is crucial to introduce your child to dental care early on.",
+        "answer": "For the first visit, you should bring your child to the dentist. The Canadian Dental Association recommends that this should occur within 6 months of the eruption of their first tooth or by the age of one, whichever comes first. This visit will help review important aspects of dental care, health, and diet for your child.",
         "metadata": []
     },
     {
         "question": "Do you treat children or provide pediatric dentistry?",
-        "answer": "Yes, we do treat children and provide pediatric dentistry. Our team is trained to address the unique concerns and fears that children often have. We strive to create a family-friendly atmosphere to ensure your child's dental visit is comfortable, relaxed, and positive, setting a strong foundation for their lifelong dental health.",
+        "answer": "Yes, we do provide pediatric dentistry services. We strive to create a family-friendly atmosphere where we address the unique concerns of children. Our goal is to ensure that your child is comfortable, relaxed, and leaves our clinic eager and enthusiastic about their future visits.",
         "metadata": []
     },
     {
         "question": "What are your policies for missed or canceled appointments?",
-        "answer": "Our policies require a minimum of 2 business days' notice should you need to reschedule or cancel your appointment. This is due to high demand for appointment times and our policy of not double-booking clients. If insufficient notice is given, a missed appointment fee may be charged, or you may be required to prepay to reserve your next appointment. It's important to note that it's your responsibility to ensure you can attend your appointment unless other arrangements have been made in advance with our office.",
+        "answer": "Our policies require a minimum of 2 business days' notice if you need to reschedule or cancel an appointment. This is due to the high demand for appointment times and our policy of not double booking clients. If insufficient notice is given, a missed appointment fee may be charged, or we may require prepayment to reserve your next appointment. You are ultimately responsible for ensuring you attend your appointment unless other arrangements have been made in advance with our office.",
         "metadata": []
     },
     {
         "question": "How do I contact you for after-hours dental emergencies?",
-        "answer": "The information provided does not specify a method of contacting the dental office for after-hours emergencies. Please provide the necessary details such as a phone number, email, or emergency hotline.",
+        "answer": "To contact us for after-hours dental emergencies, please call our emergency line. We keep appointment times available specifically for emergency cases to ensure you can access a dentist as quickly as possible. We cater to all types of injuries, no matter how big or small, and even if you are not a regular patient of ours.",
         "metadata": []
     },
     {
         "question": "Do you offer teeth whitening or cosmetic dentistry services?",
-        "answer": "Yes, we do offer teeth whitening services at Dolphin Dental. We provide two options: in-house teeth whitening for faster results and take-home teeth whitening trays for your convenience. However, please note that dental insurance does not cover cosmetic bleaching.",
+        "answer": "Yes, we do offer teeth whitening services. We have two options, in-house teeth whitening for faster results, and take-home teeth whitening trays for your convenience. However, dental insurance does not typically cover cosmetic bleaching.",
         "metadata": [
             "services",
             "offerings",
@@ -84,12 +84,12 @@
     },
     {
         "question": "Are you accepting new patients?",
-        "answer": "The information provided does not specify whether new patients are currently being accepted. Please visit the provided URL for the most accurate and up-to-date information.",
+        "answer": "Yes, we are accepting new patients.",
         "metadata": []
     },
     {
         "question": "Do you offer sedation options for anxious patients?",
-        "answer": "The provided information does not specify whether sedation options are offered for anxious patients.",
+        "answer": "The provided information does not specifically mention offering sedation options for anxious patients.",
         "metadata": []
     }
 ]

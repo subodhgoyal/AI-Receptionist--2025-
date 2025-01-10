@@ -1,9 +1,0 @@
-[
-    {
-        "user": "are you open on sundays?",
-        "assistant": "No, our dental clinic is closed on Sundays. We operate from Monday to Thursday from 08:00 am to 04:30 pm, and on Fridays from 08:00 am to 01:00 pm. Please feel free to schedule an appointment during these hours.",
-        "retrieved_chunks": [
-            "Business Hours: Business Hours: \n- Monday: 08:00 am - 04:30 pm\n- Tuesday: 08:00 am - 04:30 pm\n- Wednesday: 08:00 am - 04:30 pm\n- Thursday: 08:00 am - 04:30 pm\n- Friday: 08:00 am - 01:00 pm\n- Saturday: Closed\n- Sunday: Closed"
-        ]
-    }
-]

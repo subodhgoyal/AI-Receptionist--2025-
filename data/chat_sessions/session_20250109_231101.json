@@ -1,0 +1,45 @@
+[
+    {
+        "user": "what is your clinic name",
+        "assistant": "Our clinic's name is Dolphin.",
+        "retrieved_chunks": [
+            "Question: What is your clinic's name? Answer: dolphin"
+        ]
+    },
+    {
+        "user": "who's the dentist there?",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "which dentist do you have",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "do you take insuracne",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "do you accept insurance",
+        "assistant": "Yes, we do accept most insurances. We offer direct billing, where we submit your insurance papers to your insurance company electronically and accept their payment directly. However, there are a few insurance companies that don't allow payment to come to our office. In these cases, full payment for services is required. Please note that your treatment will always be based on your dental needs, regardless of your dental plan coverage.",
+        "retrieved_chunks": [
+            "Question: Do you accept walk-ins? Answer: No, we currently do not accept walk-ins due to our social distancing measures in the clinic. However, we do offer teledentistry services and require all new patients to fill out their paperwork online beforehand. We also offer early morning and weekend appointments for your convenience.",
+            "Question: What insurances do you accept? Answer: We accept most insurances and offer direct billing, where we submit your insurance papers to your insurance company electronically and accept their payment directly. However, there are a few insurance companies that don't allow payment to come to our office, and in these cases, full payment for services is required. Your treatment will always be based on your dental needs, regardless of your dental plan coverage."
+        ]
+    },
+    {
+        "user": "what's the teeth cleaning fee?",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    }
+]

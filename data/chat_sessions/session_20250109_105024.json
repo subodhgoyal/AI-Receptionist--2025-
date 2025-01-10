@@ -1,9 +1,0 @@
-[
-    {
-        "user": "are you open on sundays?",
-        "assistant": "Yes, we are open on Sundays. In fact, our clinic operates 24x7, so you can schedule your dental appointments at any time that's convenient for you.",
-        "retrieved_chunks": [
-            "Business Hours: we're open 24x7"
-        ]
-    }
-]
