@@ -1,0 +1,30 @@
+[
+    {
+        "user": "hey, are you open today?",
+        "assistant": "To better assist you, could you share a bit more information about what you're specifically interested in?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:49:26.273321"
+    },
+    {
+        "user": "what your openinghours?",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:49:31.979431"
+    },
+    {
+        "user": "what are your opening hours?",
+        "assistant": "Hello! Thank you for reaching out to us. Our operating hours are from Monday to Friday until 7 PM, and on Saturdays from 10:00 AM to 4:00 PM. If there's anything else you need or if you have any specific questions, feel free to ask! We're here to help.",
+        "retrieved_chunks": [
+            "Question: What are your operating hours? Answer: Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm."
+        ],
+        "timestamp": "2025-01-10T13:49:43.326900"
+    },
+    {
+        "user": "till when are you open on fridays",
+        "assistant": "Hello! Thank you for your inquiry. On Fridays, we're open until 7 PM. If you have any other questions or need assistance with anything specific, please let me know. We're here to help!",
+        "retrieved_chunks": [
+            "Question: What are your operating hours? Answer: Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm."
+        ],
+        "timestamp": "2025-01-10T13:49:53.926365"
+    }
+]

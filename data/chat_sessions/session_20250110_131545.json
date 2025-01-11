@@ -1,0 +1,22 @@
+[
+    {
+        "user": "hi",
+        "assistant": "I'd love to help you with that. Could you elaborate a bit more so I can better understand your needs?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:17:35.604878"
+    },
+    {
+        "user": "what's your clinic's name",
+        "assistant": "Hello there! Our clinic's name is Dolphin. How may I assist you further today?",
+        "retrieved_chunks": [
+            "Question: What is your clinic's name? Answer: dolphin"
+        ],
+        "timestamp": "2025-01-10T13:17:42.963280"
+    },
+    {
+        "user": "where is your clinic located",
+        "assistant": "I want to make sure I give you accurate information. Could you please provide more details about what you're looking for?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:18:03.327318"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "user": "is your clinic open on Fridays",
+        "assistant": "I'd love to help you with that. Could you elaborate a bit more so I can better understand your needs?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:25:25.049799"
+    },
+    {
+        "user": "what your opening hours",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:25:31.532957"
+    },
+    {
+        "user": "what days are you open?",
+        "assistant": "I'd love to help you with that. Could you elaborate a bit more so I can better understand your needs?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:25:41.358057"
+    }
+]

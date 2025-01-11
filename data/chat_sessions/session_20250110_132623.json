@@ -1,0 +1,16 @@
+[
+    {
+        "user": "till what time are you open today",
+        "assistant": "Good day! Today is a weekday, so we'll be open until 7pm. Please feel free to drop by anytime before then. Let me know if there's anything else you need assistance with.",
+        "retrieved_chunks": [
+            "Question: What are your operating hours? Answer: Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm."
+        ],
+        "timestamp": "2025-01-10T13:27:38.612775"
+    },
+    {
+        "user": "which day is it today?",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:27:49.506321"
+    }
+]

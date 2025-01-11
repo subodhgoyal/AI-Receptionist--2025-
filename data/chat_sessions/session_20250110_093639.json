@@ -1,0 +1,16 @@
+[
+    {
+        "user": "hi",
+        "assistant": "I'm sorry, I couldn't find this information. Can you please rephrase?",
+        "retrieved_chunks": [
+            "No relevant information found."
+        ]
+    },
+    {
+        "user": "what are your opening hours",
+        "assistant": "Our clinic operates from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm.",
+        "retrieved_chunks": [
+            "Question: What are your operating hours? Answer: Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm."
+        ]
+    }
+]

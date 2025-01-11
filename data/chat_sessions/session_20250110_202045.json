@@ -1,0 +1,14 @@
+[
+    {
+        "user": "where is your clinic located?",
+        "assistant": "I'd love to help you with that. Could you elaborate a bit more so I can better understand your needs?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T20:35:35.035693"
+    },
+    {
+        "user": "I'm trying to get to your clinic but unable to find clear directions in google maps. super confusing. can you help",
+        "assistant": "To better assist you, could you share a bit more information about what you're specifically interested in?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T20:36:14.501418"
+    }
+]

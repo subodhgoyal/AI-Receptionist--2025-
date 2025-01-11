@@ -83,7 +83,7 @@ def generate_faq_responses():
         {"\n".join(top_chunks)}
         """
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are an assistant specialized in generating FAQs for businesses."},
                 {"role": "user", "content": prompt}

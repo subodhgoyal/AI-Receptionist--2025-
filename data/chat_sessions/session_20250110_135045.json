@@ -1,0 +1,22 @@
+[
+    {
+        "user": "till when are you open today?",
+        "assistant": "I'd love to help you with that. Could you elaborate a bit more so I can better understand your needs?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:50:53.225923"
+    },
+    {
+        "user": "till when are you open on Fridays?",
+        "assistant": "Thank you for reaching out! On Fridays, we\u2019re open until 7 PM. If you have any other questions or need assistance with something else, feel free to ask. We're here to help!",
+        "retrieved_chunks": [
+            "Question: What are your operating hours? Answer: Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm."
+        ],
+        "timestamp": "2025-01-10T13:51:09.413168"
+    },
+    {
+        "user": "what is the time now",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:51:26.867194"
+    }
+]

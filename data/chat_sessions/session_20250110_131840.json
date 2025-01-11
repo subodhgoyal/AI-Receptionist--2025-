@@ -1,0 +1,80 @@
+[
+    {
+        "user": "what is your clinic called",
+        "assistant": "I'd love to help you with that. Could you elaborate a bit more so I can better understand your needs?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:18:47.845996"
+    },
+    {
+        "user": "what's the name of the dentist at your clinic",
+        "assistant": "Hello! Our clinic, Dolphin Dental, is proud to have Dr. Priya Rao as our primary dentist. She's a highly experienced professional who is committed to providing exceptional dental care. Is there anything specific you would like to know about Dr. Rao or our services?",
+        "retrieved_chunks": [
+            "ServicesFamily DentistryChildren\u2019s DentistryHappy VisitsCavity Free ClubFillings and ExtractionsSports MouthguardsEarly Intervention OrthodonticsEmergency DentistryDental Hygiene & Teeth CleaningsRoot Canal TherapyClear AlignersOrthodonticsTMJ/TMD TherapyBruxism Grinding AppliancesClear AlignersCosmetic DentistryTeeth WhiteningDental CrownsDental BridgesPorcelain VeneersCosmetic Tooth BondingDental ImplantsWhite FillingsPorcelain Inlays & OnlaysOral SurgeryTooth ExtractionsWisdom Teeth",
+            "TMJ/TMD Therapy\nBruxism Grinding Appliances\nClear Aligners\nCosmetic DentistryTeeth WhiteningDental CrownsDental BridgesPorcelain VeneersCosmetic Tooth BondingDental ImplantsWhite FillingsPorcelain Inlays & Onlays\nTeeth Whitening\nDental Crowns\nDental Bridges\nPorcelain Veneers\nCosmetic Tooth Bonding\nDental Implants\nWhite Fillings\nPorcelain Inlays & Onlays\nOral SurgeryTooth ExtractionsWisdom Teeth ExtractionsDental Implants\nTooth Extractions\nWisdom Teeth Extractions\nDental Implants",
+            "Tooth Extractions\nWisdom Teeth Extractions\nDental Implants\nPeriodontal CareGum DiseaseOral Health\nGum Disease\nOral Health\nLaser Dental Treatment\nNew Patients\nTeamDr. Priya RaoDental Assistant TeamDental Hygienists TeamDental Administration Team\nDr. Priya Rao\nDental Assistant Team\nDental Hygienists Team\nDental Administration Team\nContact\nComfort\nExperience the Dolphin Dental Difference\nDo You WantStraighter Teeth?\nWelcome to Dolphin Dental - Your East York Family Dentist!\nAbout"
+        ],
+        "timestamp": "2025-01-10T13:19:02.242216"
+    },
+    {
+        "user": "what's your clinic's name?",
+        "assistant": "I want to make sure I give you accurate information. Could you please provide more details about what you're looking for?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:19:15.546554"
+    },
+    {
+        "user": "are you from Dolphin Dental?",
+        "assistant": "Yes, indeed! I'm the AI assistant for Dolphin Dental, a family dental practice located in East York, Toronto. We're here to help answer any questions you may have about our clinic or services. How can I assist you further today?",
+        "retrieved_chunks": [
+            "URL: https://www.dolphindental.ca/",
+            "Thank you for considering Dolphin Dental for all your dental needs! Our Clinic is conveniently located in East York, Toronto, at 1273 Broadview Avenue, at the corner of Broadview Avenue and O\u2019Conner Drive. We are only minutes away from the Don Valley Parkway (DVP), as well as the Broadview TTC station and interchange (3 stops east of Yonge & Bloor on the Bloor line). From the Broadview TTC, the #8 and #100 buses stop right at our doorstep! We are pleased to offer free on-site parking, as well",
+            "At Dolphin Dental, we are committed to promoting optimal oral health, while providing personal attention and the highest quality dentistry that comes from our decades of dental experience. Our family dental practice is proud to have been serving patients since our inception in 1986. You will always enjoy a relaxing experience and focused care and attention. The building that houses our practice, a converted mansion, was built in the 1800s for a local business magnate and has its very own unique"
+        ],
+        "timestamp": "2025-01-10T13:19:25.401051"
+    },
+    {
+        "user": "how do I reach there? ",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:19:33.938311"
+    },
+    {
+        "user": "can you give me directions?",
+        "assistant": "I want to make sure I give you accurate information. Could you please provide more details about what you're looking for?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:19:39.495186"
+    },
+    {
+        "user": "can i talk to a human",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:19:50.882806"
+    },
+    {
+        "user": "what's the pricing for teeth cleaning service",
+        "assistant": "Sure, I'd be happy to assist you with that. At Dolphin Dental, we follow the most up-to-date Ontario Fee Guide for all our dental services in order to provide affordable care. The specific cost for teeth cleaning can vary depending on individual needs. If you would like a more precise estimate, I recommend booking an appointment with us so our dental professionals can evaluate your specific needs. We strive to make our pricing as transparent as possible. Is there anything else you would like to know?",
+        "retrieved_chunks": [
+            "At Dolphin Dental, we are committed to providing our patients with personalized, high-quality dental services at affordable prices, and we follow the most up-to-date Ontario Fee Guide for all our dental services. We understand that Dental Insurance & Finances can be confusing and paying for dental treatment can be stressful, especially if the costs are high. You should consider yourself fortunate if you have insurance benefits to help with the cost of your dental care. Please know that our goal",
+            "Our office prides itself on providing a very high standard of dental care at a very fair price. Please know that dental insurance is intended to cover some, but not all, of the costs of your dental care. Not all dental plans are the same, and not all treatments are eligible or fully reimbursable. Furthermore, insurance companies can sometimes make it difficult for the dental provider to retrieve any extended information. It is, therefore, important to remember that it is ultimately your",
+            "URL: https://www.dolphindental.ca/services/east-york-toronto-dental-hygiene-teeth-cleanings/"
+        ],
+        "timestamp": "2025-01-10T13:20:12.695520"
+    },
+    {
+        "user": "yes, can i walk in?",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:20:35.480657"
+    },
+    {
+        "user": "are you approved by ontario licensing?",
+        "assistant": "To better assist you, could you share a bit more information about what you're specifically interested in?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:21:13.592058"
+    },
+    {
+        "user": "what more do you need",
+        "assistant": "I want to ensure I address your question fully. Could you rephrase that or provide additional context?",
+        "retrieved_chunks": [],
+        "timestamp": "2025-01-10T13:21:19.388685"
+    }
+]
