@@ -1,0 +1,22 @@
+[
+    {
+        "user": "hi, where are you located",
+        "assistant": "This requires some verification from our team. I can have them reach out to you shortly. In the meantime, would you like to know about any other services?",
+        "timestamp": "2025-01-11T04:21:09.169823+00:00"
+    },
+    {
+        "user": "are you open now",
+        "assistant": "Hello! Thank you for reaching out to us. Unfortunately, we're currently closed. Our business hours are from 9:00 AM to 6:00 PM on weekdays, and we\u2019re open on Saturdays from 10:00 AM to 4:00 PM. \n\nIf there\u2019s anything else you\u2019d like to know or if you have any questions, feel free to ask. We\u2019re here to help! Looking forward to connecting with you during our next business hours. Have a great day!",
+        "timestamp": "2025-01-11T04:21:22.660748+00:00"
+    },
+    {
+        "user": "what's your insuracne process? do you do cashless treatment?",
+        "assistant": "I apologize, but I'm not entirely sure about this specific detail. Would you like me to have someone from our team contact you about this? Meanwhile, is there something else I can help you with?",
+        "timestamp": "2025-01-11T04:21:52.131368+00:00"
+    },
+    {
+        "user": "what insurance do you accept?",
+        "assistant": "Hello again! Thank you for your question about insurance. We accept most insurances and offer direct billing, which means we can submit your insurance papers electronically and accept payment directly from your insurance company. However, there are a few insurance companies that don\u2019t allow payment to come to our office; in those cases, full payment for services would be required. \n\nOur priority is always to provide treatment based on your dental needs, regardless of your dental plan coverage. If you have a specific insurance provider in mind or need more details, I can certainly have a member of our team reach out to you. \n\nIs there anything else you\u2019d like to know? We\u2019re here to help!",
+        "timestamp": "2025-01-11T04:22:14.547445+00:00"
+    }
+]

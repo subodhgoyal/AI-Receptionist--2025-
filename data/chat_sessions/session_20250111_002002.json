@@ -1,0 +1,17 @@
+[
+    {
+        "user": "hey, where's your lcinic",
+        "assistant": "Hello there! We're glad you're reaching out. Our clinic is located at [Your Address Here]. If you need directions or have any other questions about our services, feel free to ask. We're here to help!",
+        "timestamp": "2025-01-11T05:20:08.848500+00:00"
+    },
+    {
+        "user": "is it in burlington",
+        "assistant": "Yes, our clinic, Baywell Dental, is located in Burlington. If you need further directions or have any other questions about our services, just let me know. We're here to help!",
+        "timestamp": "2025-01-11T05:20:22.215706+00:00"
+    },
+    {
+        "user": "why did you earlier said Our clinic is located at [Your Address Here]",
+        "assistant": "I apologize for any confusion earlier. It seems there was a placeholder in the response. To clarify, our clinic, Baywell Dental, is indeed located in Burlington. If you need more specific directions or have any other questions about our services, feel free to ask. We're here to assist you!",
+        "timestamp": "2025-01-11T05:20:39.360092+00:00"
+    }
+]

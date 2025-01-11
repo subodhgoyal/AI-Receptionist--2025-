@@ -1,0 +1,22 @@
+[
+    {
+        "user": "hey, how's the clinic cleanliness level today",
+        "assistant": "Hello there! Our clinic maintains a high standard of cleanliness to ensure a safe and welcoming environment for everyone. Is there anything else related to our services or appointments that I can assist you with today?",
+        "timestamp": "2025-01-11T05:21:03.051509+00:00"
+    },
+    {
+        "user": "how's the weather in the clinic",
+        "assistant": "I apologize, but I can only assist with questions related to our business services, appointments, and general information. For this specific query, I recommend consulting appropriate resources or professionals. Is there anything about our services I can help you with?",
+        "timestamp": "2025-01-11T05:21:16.316841+00:00"
+    },
+    {
+        "user": "how's the clinic temperture",
+        "assistant": "I apologize, but I can only assist with questions directly related to our business services, appointments, and general information. If you have any questions about our services or need assistance with appointments, I'd be more than happy to help.",
+        "timestamp": "2025-01-11T05:21:29.886506+00:00"
+    },
+    {
+        "user": "hi, how is burlington where your clinic is",
+        "assistant": "Hello! I hope you're doing well. While I can't provide information about Burlington itself, I can tell you that our clinic, Baywell Dental, is located there, and we strive to create a welcoming atmosphere for all our patients. If you have any questions about our services or need assistance with appointments, feel free to ask!",
+        "timestamp": "2025-01-11T05:21:44.207031+00:00"
+    }
+]

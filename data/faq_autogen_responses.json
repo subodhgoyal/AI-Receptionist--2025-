@@ -1,7 +1,14 @@
 [
     {
+        "question": "What is your clinic's name?",
+        "answer": "Baywell Dental",
+        "metadata": [
+            ""
+        ]
+    },
+    {
         "question": "What are your operating hours?",
-        "answer": "Our operating hours are from Monday to Friday until 7pm and on Saturdays from 10:00am to 4:00pm.",
+        "answer": "Our operating hours are as follows:\n\n- **Monday:** 8:30 am \u2013 5:00 pm\n- **Tuesday:** 8:30 am \u2013 6:00 pm\n- **Wednesday:** 8:30 am \u2013 7:00 pm\n- **Thursday:** 8:30 am \u2013 6:00 pm\n- **Friday:** 8:30 am \u2013 4:00 pm\n- **Saturday:** Open on alternating weekends\n- **Sunday:** Closed\n\nPlease note that we also offer flexible morning and evening hours for emergency dentistry needs.",
         "metadata": [
             "operating hours",
             "working hours",
@@ -10,23 +17,30 @@
         ]
     },
     {
+        "question": "Where is your clinic located? And, how to get there?",
+        "answer": "Our clinic, Baywell Dental is located in Burlington.",
+        "metadata": [
+            ""
+        ]
+    },
+    {
         "question": "Do you accept walk-ins?",
-        "answer": "No, we currently do not accept walk-ins due to our social distancing measures in the clinic. However, we do offer teledentistry services and require all new patients to fill out their paperwork online beforehand. We also offer early morning and weekend appointments for your convenience.",
+        "answer": "We do not accept walk-ins. Please schedule an appointment in advance to ensure you receive the best care.",
         "metadata": []
     },
     {
         "question": "What insurances do you accept?",
-        "answer": "We accept most insurances and offer direct billing, where we submit your insurance papers to your insurance company electronically and accept their payment directly. However, there are a few insurance companies that don't allow payment to come to our office, and in these cases, full payment for services is required. Your treatment will always be based on your dental needs, regardless of your dental plan coverage.",
+        "answer": "We accept many insurances that cover Therapeutic Botox for the treatment of TMD. Our staff can assist you by submitting estimates to your insurance provider on your behalf. Please feel free to ask us for help!",
         "metadata": []
     },
     {
         "question": "How can I schedule an appointment?",
-        "answer": "To schedule an appointment, you need to contact our office in advance. However, please note that due to high demand, we require at least 2 business days' notice should you need to reschedule or cancel. We send courtesy reminders a few weeks prior to the appointment and confirmation calls or emails two weeks before, and a reminder the day before. It's your responsibility to ensure you're present for your appointment. Failure to do so may result in a missed appointment fee.",
+        "answer": "To schedule an appointment at Baywell Dental, you can either select the practice's profile online and use the scheduling option available there, or you can call our Toronto, ON office directly at (416) 961-6630.",
         "metadata": []
     },
     {
         "question": "What services do you offer?",
-        "answer": "We offer a wide range of services including Family Dentistry, Children\u2019s Dentistry, Emergency Dentistry, and Dental Hygiene & Teeth Cleanings. Additionally, we provide digital promotion services such as SEO/SEM Visibility, Organic Ranking Keywords, PPC (Pay per Click), Google Business Promotion, and Social Media & Reputation Management. We also offer creative services like Logo & Branding Design, Professional Photography & Videography, and Branded Merchandise. Our web design services include Dental Websites, Chiropractic Websites, Physiotherapy Websites, Small & Medium Business Websites, and Website Refresh. Other services include CPM Management, Practice Support & Solutions, Call Tracking, and Dental Educational Videos. If you require a service that is not listed, please contact us at (416) 429-3317.",
+        "answer": "We offer a range of services that may require a co-payment if they are partially subsidized. For more detailed information about our specific services, please call us at (416) 961-6630.",
         "metadata": [
             "services",
             "offerings",
@@ -35,47 +49,47 @@
     },
     {
         "question": "Do you provide emergency dental care?",
-        "answer": "Yes, we do provide emergency dental care. We make every effort to see and treat patients as soon as possible, regardless of the size of the dental injury. We even keep appointment times available specifically for emergency cases. This service is available to all, even if you are not a regular patient of ours.",
+        "answer": "Yes, we provide emergency dental care. Dentistry is considered an essential service, and we remain open to care for our patients while adhering to strict safety protocols to ensure the protection of both patients and staff.",
         "metadata": []
     },
     {
         "question": "How much does a cleaning or check-up cost?",
-        "answer": "The information provided does not include details on the cost of a cleaning or check-up.",
+        "answer": "The cost of a dental checkup and cleaning can vary depending on the dentist and location. Generally, you can expect to pay between $75 to $200 for a checkup and cleaning. It's advisable to check with your specific dentist for their pricing and any insurance options that may be available.",
         "metadata": []
     },
     {
         "question": "What payment methods do you accept?",
-        "answer": "We accept several payment methods including Cash, Debit Card, Visa, and MasterCard for your convenience.",
+        "answer": "We accept various payment methods, including insurance payments and co-payments for partially subsidized services. For specific details about accepted payment methods, please call us at (416) 961-6630.",
         "metadata": []
     },
     {
         "question": "Are there any special offers or discounts for new patients?",
-        "answer": "The provided information does not specify if there are any special offers or discounts for new patients at Dolphin Dental.",
+        "answer": "Yes, new patients can schedule a consultation for $150, which includes a full set of orthodontic photographs and a panorex radiograph. There are currently no additional special offers or discounts mentioned for new patients.",
         "metadata": []
     },
     {
         "question": "What should I bring for my first visit?",
-        "answer": "For the first visit, you should bring your child to the dentist. The Canadian Dental Association recommends that this should occur within 6 months of the eruption of their first tooth or by the age of one, whichever comes first. This visit will help review important aspects of dental care, health, and diet for your child.",
+        "answer": "For your first visit, please bring the following:\n\n1. **Medical History**: Any relevant medical history information, including medications you are currently taking.\n2. **Insurance Information**: If you have dental insurance, bring your insurance card or details.\n3. **Identification**: A form of ID for verification purposes.\n4. **List of Concerns**: Any specific values or concerns you wish to discuss with the dentist.\n\nThis will help us ensure a comprehensive review during your appointment.",
         "metadata": []
     },
     {
         "question": "Do you treat children or provide pediatric dentistry?",
-        "answer": "Yes, we do provide pediatric dentistry services. We strive to create a family-friendly atmosphere where we address the unique concerns of children. Our goal is to ensure that your child is comfortable, relaxed, and leaves our clinic eager and enthusiastic about their future visits.",
+        "answer": "Yes, we do treat children and provide pediatric dentistry services. Our team is dedicated to helping patients of all ages achieve their desired level of dental health, and we enjoy guiding families through the dental process.",
         "metadata": []
     },
     {
         "question": "What are your policies for missed or canceled appointments?",
-        "answer": "Our policies require a minimum of 2 business days' notice if you need to reschedule or cancel an appointment. This is due to the high demand for appointment times and our policy of not double booking clients. If insufficient notice is given, a missed appointment fee may be charged, or we may require prepayment to reserve your next appointment. You are ultimately responsible for ensuring you attend your appointment unless other arrangements have been made in advance with our office.",
+        "answer": "**What are your policies for missed or canceled appointments?**\n\nWe require patients to notify us at least 24 hours in advance if they need to cancel or reschedule an appointment. This allows us to accommodate other patients who may need our services. Failure to provide adequate notice may result in a cancellation fee or restrictions on future appointments. Please contact our office directly for more details or to discuss your specific situation.",
         "metadata": []
     },
     {
         "question": "How do I contact you for after-hours dental emergencies?",
-        "answer": "To contact us for after-hours dental emergencies, please call our emergency line. We keep appointment times available specifically for emergency cases to ensure you can access a dentist as quickly as possible. We cater to all types of injuries, no matter how big or small, and even if you are not a regular patient of ours.",
+        "answer": "For after-hours dental emergencies, please contact us at (416) 961-6630. If we are closed, you can submit your information via the form on our website and specify \u201cemergency.\u201d A member of our team will reach out to you the following day. Alternatively, you can email us at contact@baywelldental.com for advice and triage.",
         "metadata": []
     },
     {
         "question": "Do you offer teeth whitening or cosmetic dentistry services?",
-        "answer": "Yes, we do offer teeth whitening services. We have two options, in-house teeth whitening for faster results, and take-home teeth whitening trays for your convenience. However, dental insurance does not typically cover cosmetic bleaching.",
+        "answer": "Yes, we offer teeth whitening services at BayWell Dental Centre, providing immediate results in just one hour of chair time. Additionally, we provide a range of cosmetic dentistry services designed to enhance your smile with less pain and fewer appointments than in the past.",
         "metadata": [
             "services",
             "offerings",
@@ -84,12 +98,12 @@
     },
     {
         "question": "Are you accepting new patients?",
-        "answer": "Yes, we are accepting new patients.",
+        "answer": "Yes, we are currently accepting new patients. We pride ourselves on providing exceptional care and personalized attention, making us a preferred choice in the area.",
         "metadata": []
     },
     {
         "question": "Do you offer sedation options for anxious patients?",
-        "answer": "The provided information does not specifically mention offering sedation options for anxious patients.",
+        "answer": "Yes, we offer sedation options for anxious patients, including minimal conscious sedation (Laughing Gas) and oral moderate sedation, to help relieve anxiety and improve the overall experience during procedures like wisdom tooth extraction.",
         "metadata": []
     }
 ]

@@ -1,0 +1,12 @@
+[
+    {
+        "user": "hi",
+        "assistant": "Hello! Welcome to our business. How can I assist you today with our services, appointments, or any other inquiries related to our business?",
+        "timestamp": "2025-01-11T05:17:08.172710+00:00"
+    },
+    {
+        "user": "what's your clinic and where is it located?",
+        "assistant": "Hello! Our clinic, Baywell Dental, is located at [insert specific address here]. You can find directions on our website: [Baywell Dental Directions](https://www.baywelldental.com/book-an-appointment), or feel free to call us at 416-961-6630 if you need any assistance. How else can I help you today?",
+        "timestamp": "2025-01-11T05:17:21.067679+00:00"
+    }
+]

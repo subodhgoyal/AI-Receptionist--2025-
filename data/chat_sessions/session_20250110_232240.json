@@ -1,0 +1,47 @@
+[
+    {
+        "user": "what insurance do you accept",
+        "assistant": "Hello! Thank you for reaching out to us. We accept most insurances and offer direct billing, which means we electronically submit your insurance papers and accept payment directly from your insurance company. However, there are a few insurance providers that don\u2019t allow payment to come to our office. In those cases, full payment for services will be required.\n\nRest assured, your treatment will always be based on your dental needs, regardless of your dental plan coverage. If you have a specific insurance company in mind, feel free to let me know, and I can provide more details. \n\nIf there's anything else you\u2019d like to ask, please don\u2019t hesitate! We\u2019re here to help.",
+        "timestamp": "2025-01-11T04:22:46.900422+00:00"
+    },
+    {
+        "user": "so you can do direct billing for most insurances?",
+        "assistant": "Absolutely, we can handle direct billing for most insurances! It helps streamline the process for you, allowing us to submit the necessary paperwork directly to your insurance provider. This way, you won\u2019t have to worry about the hassle of dealing with reimbursements.\n\nIf you have a specific insurance company in mind, I can provide more information about how we can assist with that. Please feel free to reach out with any further questions or concerns. We\u2019re here to help!",
+        "timestamp": "2025-01-11T04:23:26.839043+00:00"
+    },
+    {
+        "user": "cool. how many dentists do you have",
+        "assistant": "This requires some verification from our team. I can have them reach out to you shortly. In the meantime, would you like to know about any other services?",
+        "timestamp": "2025-01-11T04:23:40.277900+00:00"
+    },
+    {
+        "user": "do you do cashless treatment for insured patients",
+        "assistant": "Hello again! Thank you for your question. Yes, we do offer cashless treatment for insured patients through our direct billing process. This means that if you're covered by a participating insurance plan, we can handle the payment directly with your insurance provider, so you don\u2019t have to pay out of pocket at the time of your appointment.\n\nIf you have any further questions or need more information about this process, please let me know! We\u2019re here to help make your experience as easy and convenient as possible.",
+        "timestamp": "2025-01-11T04:24:15.286807+00:00"
+    },
+    {
+        "user": "where are you located",
+        "assistant": "This requires some verification from our team. I can have them reach out to you shortly. In the meantime, would you like to know about any other services?",
+        "timestamp": "2025-01-11T04:24:22.760159+00:00"
+    },
+    {
+        "user": "what type of verification",
+        "assistant": "This requires some verification from our team. I can have them reach out to you shortly. In the meantime, would you like to know about any other services?",
+        "timestamp": "2025-01-11T04:24:28.945964+00:00"
+    },
+    {
+        "user": "what's your name",
+        "assistant": "I want to ensure you get the most accurate information. Let me have our team contact you about this specifically. While we wait for their response, is there anything else I can assist you with?",
+        "timestamp": "2025-01-11T04:24:38.082385+00:00"
+    },
+    {
+        "user": "bye",
+        "assistant": "This requires some verification from our team. I can have them reach out to you shortly. In the meantime, would you like to know about any other services?",
+        "timestamp": "2025-01-11T04:25:59.824169+00:00"
+    },
+    {
+        "user": "thanks for the help. i'm good now",
+        "assistant": "I want to ensure you get the most accurate information. Let me have our team contact you about this specifically. While we wait for their response, is there anything else I can assist you with?",
+        "timestamp": "2025-01-11T04:26:16.139784+00:00"
+    }
+]
