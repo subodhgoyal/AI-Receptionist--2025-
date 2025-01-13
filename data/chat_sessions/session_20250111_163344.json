@@ -1,0 +1,12 @@
+[
+    {
+        "user": "do you take emergency cases?",
+        "assistant": "Hello! Yes, we do take emergency cases. Our team is dedicated to providing care when you need it most, and we have strict safety protocols in place to ensure everyone's well-being. If you need immediate assistance, please don't hesitate to reach out to us. If this is a medical emergency, though, please call emergency services. How can we assist you further?",
+        "timestamp": "2025-01-11T21:34:04.854585+00:00"
+    },
+    {
+        "user": "are you open still",
+        "assistant": "Hello! Based on our operating hours, we're currently closed for today. However, we do offer flexible morning and evening hours for emergency dentistry needs. If there's anything else you need or if you'd like to schedule an appointment, feel free to let us know. We're here to help!",
+        "timestamp": "2025-01-11T21:34:58.144049+00:00"
+    }
+]

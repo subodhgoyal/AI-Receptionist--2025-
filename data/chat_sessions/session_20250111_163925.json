@@ -1,0 +1,12 @@
+[
+    {
+        "user": "hi, do you treat animals",
+        "assistant": "Hello! Thank you for reaching out to us. We specialize in services for humans, and unfortunately, we do not provide treatment for animals. If you have any other questions about our business, feel free to ask. I'm here to help!",
+        "timestamp": "2025-01-11T21:39:34.549161+00:00"
+    },
+    {
+        "user": "hi I have 5 fever and want to see the doctor urgently",
+        "assistant": "Hello! I'm really sorry to hear that you're not feeling well. If you believe you have a medical emergency, please call emergency services immediately. For non-emergency situations, I can help you schedule an appointment with our doctor. Please let me know how you'd like to proceed, and I'll do my best to assist you.",
+        "timestamp": "2025-01-11T21:40:13.687002+00:00"
+    }
+]
