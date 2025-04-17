@@ -49,10 +49,10 @@ class LLMService:
             json.dump(history, file, indent=4)
     
     def generate_llm_response(self, 
-                            user_input: str, 
-                            conversation_result: dict,
-                            session_history: List[dict],
-                            current_time: Optional[datetime] = None) -> str:
+                              user_input: str, 
+                              conversation_result: dict,
+                              session_history: List[dict],
+                              current_time: Optional[datetime] = None) -> str:
         """Generate response using LLM with conversation context"""
         if current_time is None:
             current_time = datetime.now(pytz.UTC)
@@ -125,6 +125,6 @@ class LLMService:
                 json.dump([], file, indent=4)
         return "Session reset. How can I assist you today?"
 
-def generate_session_id() -> str:
-    """Generate a unique session ID"""
-    return f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    def generate_session_id(self) -> str:
+        """Generate a unique session ID"""
+        return f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"

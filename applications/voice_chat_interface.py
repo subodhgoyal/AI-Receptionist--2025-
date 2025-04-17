@@ -7,8 +7,11 @@ from datetime import datetime
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(project_root)
 
-from src.llm_service import handle_chat, reset_session, generate_new_session_id
+from src.llm_service import LLMService
 from src.voice_interface import VoiceInterface
+
+# Initialize LLM Service
+llm_service = LLMService()
 
 # Initialize Voice Interface
 @st.cache_resource
@@ -28,7 +31,7 @@ st.markdown("""
 
 # Initialize Session State
 if "session_id" not in st.session_state:
-    st.session_state.session_id = generate_new_session_id()
+    st.session_state.session_id = llm_service.generate_session_id()
 if "messages" not in st.session_state:
     st.session_state.messages = []
 if "recording" not in st.session_state:
@@ -39,7 +42,7 @@ with st.sidebar:
     st.header("Controls")
     # Reset Session Button
     if st.button("Reset Conversation"):
-        reset_session(st.session_state.session_id)
+        llm_service.reset_session(st.session_state.session_id)
         st.session_state.messages = []
         st.success("Conversation has been reset.")
     
@@ -69,7 +72,7 @@ with col1:
                     st.session_state.messages.append({"role": "user", "content": transcribed_text})
 
                     with st.spinner("Generating response..."):
-                        response = handle_chat(transcribed_text, st.session_state.session_id)
+                        response = llm_service.handle_chat(transcribed_text, st.session_state.session_id)
                         st.chat_message("assistant").markdown(response)
                         st.session_state.messages.append({"role": "assistant", "content": response})
                         
@@ -92,7 +95,7 @@ if text_input := st.chat_input("Type your message here..."):
     st.session_state.messages.append({"role": "user", "content": text_input})
     
     with st.spinner("Generating response..."):
-        response = handle_chat(text_input, st.session_state.session_id)
+        response = llm_service.handle_chat(text_input, st.session_state.session_id)
         st.chat_message("assistant").markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
         

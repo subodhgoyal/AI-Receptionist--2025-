@@ -1,0 +1,26 @@
+[
+    {
+        "user": "hey what time are you open tomorrow",
+        "assistant": "Of course, I'd be happy to assist with that. Our business hours vary by location. Could you please provide the location you are interested in, so I can provide you with the most accurate information?",
+        "intent": "fallback",
+        "timestamp": "2025-01-16T04:11:18.906041+00:00"
+    },
+    {
+        "user": "what locations are you in?",
+        "assistant": "Our business operates in multiple locations. Could you please specify the city or region you're interested in so I can provide you with the most accurate information?",
+        "intent": "fallback",
+        "timestamp": "2025-01-16T04:12:33.588591+00:00"
+    },
+    {
+        "user": "Canada",
+        "assistant": "I understand you're looking for our business locations in Canada. We have several branches across the country. Could you please specify a city or province so I can provide the most accurate information?",
+        "intent": "fallback",
+        "timestamp": "2025-01-16T04:12:42.353406+00:00"
+    },
+    {
+        "user": "ontario burlington",
+        "assistant": "I understand you're interested in our Burlington, Ontario location. Our business hours for that location are from 9:00 AM to 5:00 PM, Monday through Friday. Please let me know if you need assistance with setting up an appointment or if you have any other questions related to our services.",
+        "intent": "fallback",
+        "timestamp": "2025-01-16T04:12:55.813429+00:00"
+    }
+]
